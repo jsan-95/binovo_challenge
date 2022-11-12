@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="crm_custom_contactus_form" name="Contact Form" inherit_id="website_crm.contactus_form">
+        <xpath expr="//form//div[4]" position="attributes">
+            <attribute name="class">form-group row form-field</attribute>
+        </xpath>
+        <xpath expr="//form//div[2]" position="replace">
+        </xpath>
+        <xpath expr="//input[@name='partner_name']" position="attributes">
+            <attribute name="required"></attribute>
+        </xpath>
+        <xpath expr="//form//div[1]" position="after">
+            <div class="form-group row form-field o_website_form_required_custom">
+                <label class="col-lg-3 col-md-4 col-form-label" for="source">Source</label>
+                <div class="col-lg-7 col-md-8">
+                    <select class="form-control o_website_form_input" name="source" id="source"
+                            t-att-value="request.params.get('source', '')" required="">
+                        <option value="thirds">Thirds</option>
+                        <option value="social">Social networks</option>
+                        <option value="internet">Internet search</option>
+                    </select>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
