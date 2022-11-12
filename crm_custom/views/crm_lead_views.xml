@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Lead views -->
+    <record id="crm_custom_form_view_oppo" model="ir.ui.view">
+        <field name="name">crm.custom.form.view.oppo</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="source"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_custom_form_view_leads" model="ir.ui.view">
+        <field name="name">crm.custom.form.view.leads</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="source"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
