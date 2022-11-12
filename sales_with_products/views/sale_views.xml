@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Blog views -->
+    <record id="sales_with_products_sale_order" model="ir.ui.view">
+        <field name="name">sales.with.products.sale.order</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="clean_lines" id="clean_lines"
+                        string="Clean lines" class="btn-primary" type="object"
+                        />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
