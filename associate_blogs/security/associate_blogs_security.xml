@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.rule" id="blog_blog_rule">
+        <field name="name">Blog company rule</field>
+        <field name="model_id" ref="website_blog.model_blog_blog"/>
+        <field name="domain_force">['|', ('company_id', 'child_of', [user.company_id.id]), ('company_id', '=', False)]</field>
+    </record>
+    <record model="ir.rule" id="blog_post_rule">
+        <field name="name">Post company rule</field>
+        <field name="model_id" ref="website_blog.model_blog_post"/>
+        <field name="domain_force">['|', ('company_id', 'child_of', [user.company_id.id]), ('company_id', '=', False)]</field>
+    </record>
+
+</odoo>
