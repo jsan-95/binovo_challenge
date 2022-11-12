@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Error status -->
+    <t t-name="crm_custom.status_email_error">
+        <span id="o_website_form_result" class="text-danger ml8">
+            <i class="fa fa-close mr4" role="img" aria-label="Error" title="Error"/>
+            Email invalid
+        </span>
+    </t>
+
+</templates>
